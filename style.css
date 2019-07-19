@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 10vh 80vh 10vh; */
+}
+
+#Apollo11 {
+    position: relative;
+    /* grid-column: 1/2;
+    grid-row: 3/4; */
+    animation: yMotion 12s infinite ease-out;
+}
+
+#Apollo11CM {
+    width: 15rem;
+    height: auto;
+    animation: xMotion 12s infinite ease-in;
+}
+
+#moon {
+    
+    border: 2px solid red;
+}
+
+#moon img {
+    width: 80rem;
+    height: auto;
+}
+
+/*ANIMATION*/
+
+/*To achieve a curved trajectory, place the element that will be visibly animated in an invisible container and apply a different animation to each.*/
+
+    
+    @keyframes xMotion {
+     50% {
+        animation-timing-function: ease-in;
+        transform: translateX(30vw);
+     }
+    }
+    
+    @keyframes yMotion {
+     50% {
+         animation-timing-function: ease-out;
+        transform: translateY(-45vh);
+     }
+    }
