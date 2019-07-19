@@ -2,22 +2,22 @@ body {
     background-color: black;
     background-image: url('./sky.svg');
     background-size: cover;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 10vw auto 10vw;
     grid-template-rows: 10vh 80vh 10vh;
 }
 
 #Apollo11 {
-    position: relative;
+    position: absolute;
     bottom: -300px;
-    
     grid-column: 1/2;
     grid-row: 3/4;
     animation: yMotion 15s infinite ease-out;
 }
 
 #Apollo11CM {
-    width: 15rem;
+    width: 8vw;
     height: auto;
     animation: xMotion 15s infinite ease-in;
 }
@@ -32,7 +32,7 @@ body {
 #moon img {
     align-self: center;
     justify-self: center;
-    width: 80rem;
+    width: 40vw;
     height: auto;
 }
 
@@ -51,6 +51,6 @@ body {
     @keyframes yMotion {
      50% {
         animation-timing-function: ease-out;
-        transform: translateY(-48vh);
+        transform: translateY(-40vh);
      }
     }
