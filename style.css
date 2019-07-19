@@ -45,7 +45,7 @@ body {
     @keyframes xMotion {
      50% {
         animation-timing-function: ease-in;
-        transform: translateX(40vw);
+        transform: translateX(40vw) rotate(360deg);
      }
     }
     
