@@ -1,31 +1,33 @@
 body {
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 10vw 80vw 10vw;
-    grid-template-rows: 10vh 80vh 10vh; */
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: 10vh 80vh 10vh;
 }
 
 #Apollo11 {
     position: relative;
-    /* grid-column: 1/2;
-    grid-row: 3/4; */
-    animation: yMotion 12s infinite ease-out;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    animation: yMotion 15s infinite ease-out;
 }
 
 #Apollo11CM {
     width: 15rem;
     height: auto;
-    animation: xMotion 12s infinite ease-in;
+    animation: xMotion 15s infinite ease-in;
 }
 
 #moon {
-    
-    border: 2px solid red;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
 }
 
 #moon img {
+    align-self: center;
+    justify-self: center;
     width: 80rem;
     height: auto;
 }
@@ -38,7 +40,7 @@ body {
     @keyframes xMotion {
      50% {
         animation-timing-function: ease-in;
-        transform: translateX(30vw);
+        transform: translateX(40vw);
      }
     }
     
