@@ -15,7 +15,7 @@ body {
     grid-column: 1/3;
     grid-row: 1/2;
     color: rgb(200, 216, 173);
-    font-size: 3rem;
+    font-size: 1rem;
     font-family: 'Exo', sans-serif;
 }
 
@@ -54,21 +54,22 @@ body {
     grid-row: 2;
     align-self: end;
     justify-self: start;
-    height: 32rem;
-    width: 32rem;
+    height: 12rem;
+    width: 12rem;
 }
 
 #Earth {
-    height: 30rem;
-    width: 30rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     border-left: 1px outset rgb(14, 6, 41);
     border-right: 1px outset rgb(51, 27, 95);
     background-image: url('./NASA\ seamless\ map\ bluemarble-2048.png');
+    background-size: cover;
     background-position: center center;
     transition: transform 0.002s linear;
-    animation: Earth-rotation 15s infinite linear;
-    box-shadow: inset 90px 0 90px 25px rgb(0, 0, 3), 1px 0px 90px 5px #022b4986;
+    animation: Earth-rotation 10s infinite linear;
+    box-shadow: inset 50px 0 50px 5px rgb(1, 1, 12), 1px 0px 90px 5px #022b4986;
     transform-style: preserve-3d;
 }
 
