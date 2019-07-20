@@ -1,12 +1,22 @@
 body {
     display: grid;
-    grid-template-columns: 10vw auto 10vw;
+    grid-template-columns: 10vw auto 15vw;
     grid-template-rows: 10vh 80vh 10vh;
     background-color: black;
     background-image: url('./sky.svg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#info {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    color: rgb(200, 216, 173);
+    font-size: 3rem;
+    font-family: 'Exo', sans-serif;
 }
 
 #Apollo11 {
@@ -35,6 +45,31 @@ body {
     justify-self: center;
     width: 40vw;
     height: auto;
+    border-radius: 50%;
+    box-shadow: inset 90px 0 90px 15px rgb(16, 16, 17), 20px 0px 90px 5px #cad1a24d;
+}
+
+#Earth-container {
+    grid-column: 3/4;
+    grid-row: 2;
+    align-self: end;
+    justify-self: start;
+    height: 32rem;
+    width: 32rem;
+}
+
+#Earth {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    border-left: 1px outset rgb(14, 6, 41);
+    border-right: 1px outset rgb(51, 27, 95);
+    background-image: url('./NASA\ seamless\ map\ bluemarble-2048.png');
+    background-position: center center;
+    transition: transform 0.002s linear;
+    animation: Earth-rotation 15s infinite linear;
+    box-shadow: inset 90px 0 90px 25px rgb(0, 0, 3), 1px 0px 90px 5px #022b4986;
+    transform-style: preserve-3d;
 }
 
 /*ANIMATION*/
@@ -54,4 +89,13 @@ body {
         animation-timing-function: ease-out;
         transform: translateY(-40vh);
      }
+    }
+
+    @keyframes Earth-rotation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position:2048 0;
+        }
     }
