@@ -7,6 +7,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
@@ -43,6 +45,7 @@ h1 {
     -ms-animation: yMotion 15s infinite ease-out;
     -webkit-animation: yMotion 15s infinite ease-out;
     animation: yMotion 15s infinite ease-out;
+    z-index: 3;
 }
 
 #Apollo11CM {
@@ -58,6 +61,7 @@ h1 {
     grid-row: 2/3;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 #moon img {
@@ -72,12 +76,15 @@ h1 {
 }
 
 #Earth-container {
+    display: flex;
+    flex-direction: row;
     grid-column: 3/4;
     grid-row: 2;
     align-self: end;
     justify-self: start;
     height: 12rem;
     width: 12rem;
+    z-index: 1;
 }
 
 #Earth {
@@ -137,4 +144,71 @@ h1 {
         100% {
             background-position:2048 0;
         }
+    }
+
+    /*SMALLER SCREENS*/
+
+    @media (max-width: 500px) {
+
+        body {
+            grid-template-rows: 20vh 40vh auto;
+        }
+
+        #Apollo11CM {
+            width: 16vw;
+            height: auto;
+        }
+        
+        #moon img {
+            width: 50vw;
+            height: auto;
+        }
+
+        #Earth-container {
+            justify-content: flex-end;
+            grid-column: 3/4;
+            grid-row: 2;
+            align-self: end;
+            justify-self: end;
+        }
+
+        #Earth {
+            height: 4rem;
+            width: 4rem;
+            margin-top: 50px;
+            margin-right: 10px;
+            -ms-box-shadow: inset 25px 0 25px 5px rgb(1, 1, 12), 1px 0px 90px 5px #022b4986;
+            -webkit-box-shadow: inset 25px 0 25px 5px rgb(1, 1, 12), 1px 0px 90px 5px #022b4986;
+             box-shadow: inset 25px 0 25px 5px rgb(1, 1, 12), 1px 0px 90px 5px #022b4986;
+        }
+
+        #info {
+            grid-column: 2/4;
+            grid-row: 3/4;
+            justify-self: end;
+            align-self: end;
+        }
+
+        @keyframes xMotion {
+            50% {
+            -ms-webkit-animation-timing-function: ease-in;
+            -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            -ms-transform: translateX(40vw) rotate(360deg);
+            -webkit-transform: translateX(40vw) rotate(360deg);
+                transform: translateX(40vw) rotate(360deg);
+            }
+        }
+        
+        @keyframes yMotion {
+            50% {
+            -ms-animation-timing-function: ease-out;
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            -ms-transform: translateY(-72vh);
+            -webkit-transform: translateY(-72vh);
+                transform: translateY(-72vh);
+            }
+        }
+
     }
