@@ -1,34 +1,18 @@
 @font-face {
-    font-family: 'FuturaPT';
+    font-family: 'FuturaMedium';
     src: 
-    local('FuturaPT')
-    url('./Fonts/FuturaPTDemi.otf')
+    local('FuturaMedium')
+    url('./Fonts/FuturaMedium.ttf')
     format('opentype')
     }
 
-@font-face {
- font-family: 'FuturaPT';
- src: 
- local('FuturaPT')
- url('./Fonts/FuturaPTMedium.otf')
- format('opentype')
-}  
-    
-@font-face {
-    font-family: 'FuturaPT';
-    src: 
-    local('FuturaPT')
-    url('./Fonts/FuturaPTMediumOblique.otf')
-    format('opentype')
-} 
-
-@font-face {
-    font-family: 'FuturaPT';
-    src: 
-    local('FuturaPT')
-    url('./Fonts/FuturaPTLight.otf')
-    format('opentype')
-} 
+    @font-face {
+        font-family: 'Futura';
+        src: 
+        local('Futura')
+        url('./Fonts/FuturaT_Bold.ttf')
+        format('opentype')
+        }
 
 body {
     display: grid;
@@ -43,20 +27,19 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    font-family: 'FuturaPT', sans-serif;
 }
 
 h1 {
     color: rgb(200, 216, 173);
     font-size: 1.383rem;
-    font-family: 'FuturaPT', sans-serif;
+    font-family: 'Futura', sans-serif;
     font-weight: 600;
 }
 
 h2 {
     color: rgb(180, 195, 152);
     font-size: 1.067rem;
-    font-family: 'FuturaPT', sans-serif;
+    font-family: 'Futura-Medium', sans-serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -74,8 +57,8 @@ h2 {
     margin: 0;
     color: rgb(200, 216, 173);
     font-size: 1rem;
-    font-family: 'FuturaPT', sans-serif;
-    font-weight: 500;
+    font-family: 'Futura', serif;
+    font-weight: 400;
     border-radius: 5px;
 }
 
@@ -85,7 +68,7 @@ h2 {
 }
 
 #info a {
-    color: rgb(13, 105, 209);
+    color: rgb(65, 122, 245);
     font-size: 0.937rem;
 }
 
@@ -125,7 +108,8 @@ h2 {
     -ms-box-shadow: inset 90px 0 90px 15px rgb(16, 16, 17), 20px 0px 90px 5px #cad1a24d;
     -webkit-box-shadow: inset 90px 0 90px 15px rgb(16, 16, 17), 20px 0px 90px 5px #cad1a24d;
     box-shadow: inset 90px 0 90px 15px rgb(16, 16, 17), 20px 0px 90px 5px #cad1a24d;
-}
+    transform: rotate(23.5deg);
+    }
 
 #Earth-container {
     display: flex;
@@ -240,6 +224,7 @@ h2 {
             justify-self: end;
             align-self: end;
             padding: 0 8px 16px 0;
+            line-height: 1.6;
         }
 
         @keyframes xMotion {
