@@ -32,14 +32,14 @@ body {
 h1 {
     color: rgb(200, 216, 173);
     font-size: 1.383rem;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Futura', 'Trebuchet MS', sans-serif;
     font-weight: 600;
 }
 
 h2 {
     color: rgb(180, 195, 152);
     font-size: 1.067rem;
-    font-family: 'Futura-Medium', sans-serif;
+    font-family: 'Futura-Medium', 'Trebuchet MS', sans-serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -57,7 +57,7 @@ h2 {
     margin: 0;
     color: rgb(200, 216, 173);
     font-size: 1rem;
-    font-family: 'Futura', serif;
+    font-family: 'Futura', 'Trebuchet MS', serif;
     font-weight: 400;
     border-radius: 5px;
 }
@@ -182,9 +182,9 @@ h2 {
         }
     }
 
-    /*SMALLER SCREENS*/
+    /*SMALL SCREENS*/
 
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
 
         body {
             grid-template-rows: 20vh 40vh auto;
